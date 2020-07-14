@@ -13,7 +13,8 @@ namespace CheckBoxAdv_DataBinding_Boolean
 {
     public partial class Form1 : Form
     {
-        public const string connectString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\NiranjanKumarGopalan\source\repos\CheckBoxAdv_DataBinding_Boolean\Database1.mdf;Integrated Security=True";
+         public static string dataBasePath = Path.GetFullPath("..\\..\\Database1.mdf");
+        public  string connectString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dataBasePath + ";Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
